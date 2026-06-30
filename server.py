@@ -90,4 +90,4 @@ def uploaded_file(filename):
 
 if __name__ == '__main__':
     print("Server starting at https://127.0.0.1:5000")
-    app.run(debug=True, host='0.0.0.0', port=5000, ssl_context=('cert.pem', 'key.pem'))  # Use your SSL certificate and key files
+    app.run(debug=True, host='0.0.0.0', port=5000, ssl_context=('cert.pem', 'key.pem'), cert_reqs='CERT_REQUIRED', ca_certs='ca.crt')
